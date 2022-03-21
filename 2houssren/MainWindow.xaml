@@ -9,17 +9,19 @@
     Width="350"
     Height="200"
     AllowDrop="True"
+    TitleCharacterCasing="Normal"
     Topmost="True"
     WindowStartupLocation="CenterScreen"
+    WindowTransitionsEnabled="False"
     mc:Ignorable="d">
 
     <mah:MetroWindow.LeftWindowCommands>
         <mah:WindowCommands>
-            <Button>
+            <Button x:Name="InfoButton">
                 <Viewbox Margin="-2,4">
-                    <Canvas Width="32" Height="50">
+                    <Canvas Width="30" Height="55">
                         <Canvas.RenderTransform>
-                            <TranslateTransform X="-22" Y="-14" />
+                            <TranslateTransform X="-24" Y="-11" />
                         </Canvas.RenderTransform>
                         <Path Fill="{DynamicResource MahApps.Brushes.IdealForeground}">
                             <Path.Data>

@@ -44,6 +44,8 @@ namespace _2houssren
                 if (ni.Length > 0)
                     File.WriteAllText(output, ni.ToString());
             };
+
+            InfoButton.Click += (_, e) => new Info().Show();
         }
     }
 }

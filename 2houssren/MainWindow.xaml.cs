@@ -1,4 +1,5 @@
 ﻿using MahApps.Metro.Controls;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -46,6 +47,11 @@ namespace _2houssren
             };
 
             InfoButton.Click += (_, e) => new Info().Show();
+        }
+
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

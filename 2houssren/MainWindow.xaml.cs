@@ -1,5 +1,4 @@
 ﻿using MahApps.Metro.Controls;
-using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -13,6 +12,8 @@ namespace _2houssren
         public MainWindow()
         {
             InitializeComponent();
+
+            CommandBindings.AddRange(MyCommands.BindingMyCommands());
 
             DragOver += (_, e) =>
             {
@@ -45,13 +46,6 @@ namespace _2houssren
                 if (ni.Length > 0)
                     File.WriteAllText(output, ni.ToString());
             };
-
-            InfoButton.Click += (_, e) => new Info().Show();
-        }
-
-        protected override void OnClosing(CancelEventArgs e)
-        {
-            Application.Current.Shutdown();
         }
     }
 }
